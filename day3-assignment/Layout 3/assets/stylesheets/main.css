@@ -1,0 +1,116 @@
+/* Reset CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+  */
+ 
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, 
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  body {
+  	line-height: 1;
+  }
+
+  blockquote, q {
+  	quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  	content: '';
+  	content: none;
+  }
+  table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  }
+
+  /* Main CSS */
+
+
+  /* Exercise - 1 CSS */
+
+main {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.overall-area {
+  display: inline-block;
+  width: 850px;
+  /*background-color: #abcdef;*/
+}
+
+.section1-shapes {
+  display: inline-block;
+  color: white;
+  /*font-weight: bold;*/
+  width: 200px;
+  height: 200px;
+  background-color: #b2b2b2;
+  /*margin: 5px 5px;*/
+  text-align: left;
+  padding: 20px 0px 0px 20px;
+  box-sizing: border-box;
+}
+
+.big-box {
+  width: 400px;
+}
+
+.ex1-shape1 {
+  background-color: #FE5349;
+}
+
+.ex1-shape2 {
+  background-color: #0C8870;
+}
+
+.ex1-shape3 {
+  background-color: #B601FE;
+}
+
+.ex1-shape4 {
+  background-color: #0EC0FC;
+}
+
+.ex1-shape5 {
+  background-color: #08CA81;
+}
+
+.ex1-shape6 {
+  background-color: #01F363;
+}
+
+.ex1-shape7 {
+  background-color: #E8FF1D;
+}
+
+.ex1-shape8 {
+  background-color: #FE7405;
+}
+
+.ex1-shape9 {
+  background-color: #E52F2E;
+}
