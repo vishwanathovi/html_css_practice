@@ -1,0 +1,219 @@
+/* Reset CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+  */
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, 
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  body {
+  	line-height: 1;
+  }
+
+  blockquote, q {
+  	quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  	content: '';
+  	content: none;
+  }
+  table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  }
+
+  /* Main CSS */
+
+  /* Section 1 - No float*/
+
+  body{
+    padding: 60px;
+  }
+
+  h1{
+    font-size:1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+
+  img{
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+  }
+
+  p{
+    display: inline;
+    /*clear: both;*/
+  }
+
+  hr{
+    width: 1000px;
+    margin: 40px;
+  }
+
+  div{
+    display: block;
+  }
+
+  .main-block{
+    clear: both;
+    margin: 20px;
+  }
+
+  .main-block:before, /* float clear for the parent */
+  .main-block:after{
+    content: "";
+    display: table;
+  }
+
+  .main-block:after{
+    clear:both;
+  }
+
+  .main-block{
+    clear:both;
+    *zoom:1;
+  }
+  
+  /* Section 3 - Float right*/
+
+  .right-flt-img{
+    float: right;
+  }
+
+  /* Section 2 - Float left*/
+
+  .left-flt-img {
+    float: left;
+  }
+
+  .flt-parent{
+    width: 100%;
+    height: 120px;
+    /*border: 1px solid black;*/
+  }
+
+  .flt-parent:before, /* float clear for the parent */
+  .flt-parent:after{
+    content: "";
+    display: table;
+  }
+
+  .flt-parent:after{
+    clear:both;
+  }
+
+  .flt-parent{
+    clear:both;
+    *zoom:1;
+  }
+  /* Section 3 - Float right*/
+
+  .right-flt-img{
+    float: right;
+  }
+
+  /* Section 4 - Two item, float left */
+
+  /*An extra section is added in HTML*/
+
+  /* Section 5 - Two item, float right */
+
+  /*An extra section is added in HTML*/
+
+
+  /* Section 6 - No floats, No words */
+
+  .flt-parent2{
+    background-color: #f2bc65;
+    /*padding:20px;*/
+    /*border:15px solid #e8962c;*/
+    /*outline: 2px solid red;*/
+    box-shadow: 0 0 0 15px #e8962c, 0 0 0 18px #ee0404;
+    clear: both;  
+  }
+
+  .p{
+    background-color: blue;
+  }
+
+  /* Section 7 - Float: left, no words */
+
+  .hr-section7{
+    /*margin-top: 180px;*/
+  }
+
+  /* Section 8 - Many floats, not floating */
+
+  .box{
+    height: 100px;
+    width:100%;
+    background: #57edde;
+    margin:5px;
+    float: left;
+  }
+
+  /* Section 9 - Many floats, No words + last one clear */
+
+  .box9{
+    height: 100px;
+    width:100px;
+    background: #57edde;
+    margin:5px;
+    float: left;
+  }
+
+  .last-box{
+    float:left;
+    clear:both;
+  }
+
+  /* Section 10 - Many floats, No words + invisible non floating clearing object */
+
+  .clear-object{
+    clear: both;
+  }
+
+  /* Section 11 - Many floats, No words + Clear fix */
+
+  .flt-parent-fix:before, /* float clear for the parent */
+  .flt-parent-fix:after{
+    content: "";
+    display: table;
+  }
+
+  .flt-parent-fix:after{
+    clear:both;
+  }
+
+  .flt-parent-fix{
+    clear:both;
+    *zoom:1;
+  }

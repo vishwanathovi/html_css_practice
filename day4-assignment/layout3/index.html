@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>  
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/stylesheets/main.css">
+		<title> Day 4 - Layout 3</title>
+	</head>
+	<body> 
+		<!-- Header content -->
+		<header>
+			<h1>side-by-side positioning demo</h1>
+		</header>
+		<!-- Main content -->
+		<main>
+			<div class="main-container">
+				<div class="section">
+					<div class="blocks section1-blocks">These two divs are positioned next to one another using <mark>display: inline-block</mark></div>
+					<div class="blocks section1-blocks">Notice the space between them. It occurs because of my carriage return in the HTML which I've used to keep the code organized. I've used a reset ensure no elements should have any default margins or padding. (I did add a button margin to make it easier to read.) This space is actually a space character rendered just as it would be between two inine elements.</div>
+				</div>
+				<div class="section">
+					<div class="blocks section2-blocks">These two positioned using <mark>float: left</mark>.</div>
+					<div class="blocks section2-blocks">you can see that, even though the elements are spaced in the code, the space is not actually rendered on the same page. This may not be a huge deal in these first examples, but.. 
+					</div>
+					<div class="float-last-item"></div>
+				</div>
+				<div class="section">
+					<div class="blocks section3-blocks">What if I want my side-by-side elements to take up the full width of the parent element? I can set the width of each to 50% , right?</div>
+					<div class="blocks section3-blocks"> Wrong! Because, together, the two inline block elements will addd up to 100% of the available width, but that doesn't account for the space between.
+					</div>
+				</div>
+				<div class="section">
+					<div class="blocks section4-blocks">If i do the same thing with floated elements... </div>
+					<div class="blocks section4-blocks">The two elements are side-by-side just as I intended and fill the entire width of the viewport.</div>
+				</div>
+			</div>
+
+		</main>
+		<!-- Footer content -->
+		<footer>
+		</footer>
+	</body>
+</html>
+
+
+
