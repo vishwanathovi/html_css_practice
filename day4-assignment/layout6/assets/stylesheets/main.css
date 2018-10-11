@@ -3,7 +3,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
   */ 
-
+ 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -56,7 +56,19 @@
   }
 
   h1{
+    position: fixed;
+    top: 0px;
+    left: 260px;
     color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    margin:0px 0 15px 0;
+    background-color: #EFEFEF;
+    padding:20px 70px 15px 70px;
+  }
+
+  .sudo-h1 {
+    color: #EFEFEF;
     font-size: 2em;
     font-weight: bold;
     margin:20px 0 15px 0;
@@ -67,15 +79,21 @@
     background-color: white;
     margin:0 auto;
     border-radius: 3px;
-    /*display: inline-block;*/
   }
 
   .left-menu{
-    /*float:left;*/
-    width:20%;
-    display: inline-block;
+    position: fixed;
+    top: 60px;
+    left: 280px;
     vertical-align: top;
   }
+
+  .sudo-aside-left{  /* This works as a placeholder behind the absolute element */
+    width:20%;
+    display: inline-block;
+    height: 800px;
+    /*vertical-align: top;*/
+}
 
   article{
     /*float:left;*/
@@ -111,9 +129,6 @@
     padding-top:50px;
   }
 
-  img{
-    width: 100%;
-  }
 
   /* Middle Menu - Styling*/
 
@@ -127,6 +142,12 @@
   p{
     font-size: 0.85em;
   }
+
+
+  img{
+    width: 100%;
+  }
+
 
 /* Right menu - Styling*/
 

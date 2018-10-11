@@ -66,10 +66,14 @@
     position: fixed;
     top: 0;
     left: 0;
+    padding: 20px;
+    box-sizing: border-box;
   }  
 
   .flow-box{
     width: 50%;
     float: right;
     background-color: aqua;
+    padding: 20px;
+    box-sizing: border-box;
   }

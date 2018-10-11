@@ -48,6 +48,10 @@
 
   /* Main CSS */
 
+  body{
+    background-color: #dddddd;
+  }
+
   /* header formating*/
 
   h1{
@@ -66,7 +70,7 @@
   .main-container{
     width: 600px;
     margin: auto;
-    /*background-color: #eeeeee;*/
+    background-color: white;
     padding: 5px;
   }
 

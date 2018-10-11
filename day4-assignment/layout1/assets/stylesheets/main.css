@@ -50,11 +50,11 @@
 
   /* Section 1 - No float*/
 
-  body{
+  body {
     padding: 60px;
   }
 
-  h1{
+  h1 {
     font-size:1.5em;
     font-weight: bold;
     margin-bottom: 30px;
