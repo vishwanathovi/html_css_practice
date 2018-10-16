@@ -304,3 +304,24 @@ a:hover {
   margin-right:0;
 }
 
+
+/* Speaker section - formatting*/
+
+.speaker-info{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
+}
+S
+.speaker{
+  margin-bottom:44px;
+}
+
+.teaser img{
+  border-radius: 5px;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 22px;
+}
