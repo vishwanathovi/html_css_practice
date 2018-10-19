@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
    */ 
- 
+
    html, body, div, span, applet, object, iframe,
    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
    a, abbr, acronym, address, big, cite, code,
@@ -53,26 +53,402 @@
     font-size: 16px;
   }
 
-/* Header CSS*/
+  /* CF and Border box - CSS*/
 
-*, *:after, *:before{
-  box-sizing: border-box;
-}
+  *, *:after, *:before{
+    box-sizing: border-box;
+  }
 
-.cf,.cf:before,.cf:after{
-  content:"";
-  display: table;
-}
+  .cf,.cf:before,.cf:after{
+    content:"";
+    display: table;
+  }
 
-.cf:after{
-  clear:both;
-}
+  .cf:after{
+    clear:both;
+  }
 
-.cf{
-  clear:both;
-  *zoom:1;
-}
+  .cf{
+    clear:both;
+    *zoom:1;
+  }
 
-/* Header formatting */
+  /* General formatting */
+
+  body{
+    font-size: 16px;
+    color:#fff;
+    text-align: center;
+  }
+
+  h1,h2,h3,h4,h5{
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  h1{
+    font-size: 2.8em;
+    line-height: 1.6;
+    letter-spacing: 1.2;
+    padding:20px;
+  }
+
+  h2{
+    font-size: 2em;
+    letter-spacing: 1.2;
+    padding:20px;
+  }
+
+  h3{
+    font-size: 1.5em;
+    line-height: 1.6;
+    letter-spacing: 1.2;
+    padding:20px;
+  }
+
+  h4{
+    font-size: 1.3em;
+  }
+
+  h5{
+    font-size: 1.2em;
+  }
+
+  .section{
+    padding:50px 0;
+    width:100%;
+  }
+
+  .wrapper{
+    max-width: 960px;
+    width:100%;
+    margin: 0 auto;
+  }
+
+  .col-1-3{
+    float:left;
+    width:30%;
+    margin: 0 1.66%;
+    padding-bottom: calc(960px * 0.0166);
+    padding-top: calc(960px * 0.0166)
+  }
+
+  .col-2-3{
+    float:left;
+    width:60%;
+    margin: 0 1.66%;
+    padding-bottom: calc(960px * 0.0166);
+    padding-top: calc(960px * 0.0166)
+  }  
+
+  .col-1-2{
+    float:left;
+    width:50%;
+    /*margin: 0 1.66%;*/
+    /*padding-bottom: calc(960px * 0.0166);*/
+    /*padding-top: calc(960px * 0.0166)*/
+  } 
+
+  .btn{
+    padding:15px 40px;
+    font-weight: 600;
+    border:none;
+    border-radius: 3px;
+  }
+
+  .black{
+    color:black;
+  }
+
+  .relative{
+    position: relative;
+  }
+
+  .center{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+  /* Header fomatting */
+
+  header{
+    position: fixed;
+    background-color: #264f59;
+    text-transform: uppercase;
+    width: 100%;
+    padding:10px 0;
+    font-weight: 600;
+    top:0;left:0;
+    height: 56px;
+  }
+
+  .logo{
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .logo h2{
+    padding-top:0;
+    padding-bottom:0;
+
+  }
+
+  .header__nav{
+    /*float: left;*/
+    display: inline-block;
+    width: 68%;
+    text-align: right;
+    /*padding:10px 0;*/
+    vertical-align: middle;
+  }
+
+  .header__nav li{
+    display: inline-block;
+    width:auto;
+    padding-left:20px;
+  }
+
+  .ham-icon{
+    position:absolute;
+    top:0; right:0;
+    padding-top:18px;
+    padding-right:20px;
+    font-size: 20px;
+    display: none;
+    visibility: hidden;
+  }
+
+  #toggle {
+    display: none;
+  }
 
 
+  /* Hero section formatting */
+
+  .hero{
+    background-image: linear-gradient(to top, #00a982,#21595e);
+    margin-top:56px;
+  }
+
+  .hero__img{
+    border-radius: 50%;
+    width:20%;
+  }
+
+  .hero__text{
+    font-size: 1.2em;
+    text-transform: capitalize;
+  }
+
+  /* Portfolio section */
+  .portfolio h2{
+    color:black;
+  }
+
+  /* About section */
+
+  .about{
+    background-image: linear-gradient(to top, #00a982,#21595e);
+    text-align: center;
+  }
+
+  .about__text{
+    text-align: left;
+    line-height: 1.4;
+    letter-spacing: 1.1;
+  }
+
+  .about__text1{
+    float: right;
+  }
+
+  .about__btn{
+    background-color: #fff;
+    border: 1px solid black;
+  }
+
+  /* Contact section */
+
+  .contact-form{
+    float:none;
+    display: block;
+    margin:0 auto;
+    text-align: left;
+  }
+
+  .form__item{
+    display: block;
+    width:100%;
+    font-family: sans-serif;
+    border:none;
+    border-bottom:1px solid #777;
+    resize: none; /* to remove the resize option from text-area */
+    padding:15px 0;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+  }
+
+  .form__item::placeholder{
+    color:#777;
+  }
+
+  textarea{
+    height:100px;
+  }
+
+  .form__btn{
+    margin-top:50px;
+    color:#fff;
+    background-color: #007362;
+  }
+
+  /* Map section formatting */
+
+  .map{
+    background-color: #bcc7d3;
+  }
+
+  /* Table section formatting */
+
+  table {
+    border-collapse: collapse;
+    margin:0 auto;
+    width:100%;
+  }
+
+  th{
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  th,
+  td {
+    /*border: 1px solid #cecfd5;*/
+    padding-top: 10px;
+    padding-bottom:10px;
+  }
+
+  thead {
+    background: #242b3e;
+    color: #005b79;
+  }
+
+  tbody tr:nth-child(odd){
+    background-color: #6a7182;
+  }
+
+  tbody tr:nth-child(even){
+    background-color: #30374a;
+  }
+
+  tr th:nth-child(1){
+    text-align: left;
+  }
+
+
+  /* Last section formatting*/
+
+  .last-section{
+    background-color: #2d4154;
+  }
+
+  .last-section__text{
+    line-height: 1.3;
+    font-size:  1.3em;
+  }
+
+  .icon{
+    color:white;
+  }
+
+  .icon-circle{
+    border:1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    display: block;
+    float:left;
+    margin:0 7.9px;
+  }
+
+  /* Footer formatting */
+
+  footer{
+    background-color: #192a34;
+  }
+
+  footer p{
+    text-transform: capitalize;
+    padding:30px;
+  }
+
+  /* Adoptive formatting for less than 600px */
+
+
+  @media all and (max-width: 800px) {
+
+    body{
+      font-size: 10px;
+    }
+
+    h1{
+      font-size: 2.4em;
+    }
+
+    .wrapper{
+      width: 100%;
+    }
+    .col-1-2, .col-1-3, .col-2-3{
+      width: 60%;
+      float:none;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .icon-circle{
+      float:none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    /* Hamburger menu formatting */
+
+    .ham-icon{
+      display: block;
+      visibility: visible;
+    }
+
+    .header__nav li{
+      width: 100%;
+      padding-right:20px;
+      float:right;
+      padding-top:30px;
+      padding-bottom:10px;
+      font-size: 1.2em;
+      background-color: #264f59;
+      max-height: 0px;
+      visibility: hidden;
+      opacity: 0;
+      /*max-height: 0px; */
+      transition: opacity 300ms ease-in-out; 
+    }
+
+    .header__nav li:nth-child(1){
+      padding-top:50px;
+    }
+
+    .header__nav{
+      width:33%;
+      float:right;
+    }
+
+    #toggle:checked ~ .header__nav li{
+      opacity: 1;
+      visibility: visible;
+      max-height: 100px;
+    }
+
+  } 
