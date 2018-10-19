@@ -128,20 +128,14 @@
     text-decoration: underline;
   }
 
-  /* Navigation button formatting*/
-
-  /* Common styles*/
   .nav-icons{
-    display: block;
+    display: inline-block;
     width:10%;
-    /*float:left;*/
+    float:left;
     position: relative;
-    /*vertical-align: bottom;*/
-    /*top:85%;left:5%;*/
-    /*padding-bottom: 20px;*/
-    /*padding-right:150px;*/
+    top:85%;left:5%;
   }
-
+ 
   .navigation-up, .navigation-down{
     width: 35px;
     height: 35px;
@@ -163,6 +157,7 @@
     font-size: 1.3em;
   }
 
+
   .fa-sort-up{
     transform: translate(-50%,-30%);
   }
@@ -171,7 +166,6 @@
     transform: translate(-50%,-70%);
     color:#00C69A;
   }
-
 
   .right-section-nav{
     top:85%;left:90%;
@@ -191,6 +185,8 @@
   }
 
 
+
+
  /* .navigation-button{
     height:50px;
     width:50px;
@@ -200,7 +196,7 @@
   .navigation-button:before{
     content: "\f078";
   }
-  */
+*/
   .main-section button{
     display:block;
     padding:18px 50px;
@@ -223,7 +219,6 @@
   .subsections{
     height: 100vh;
     background-color: white;
-    text-align: center;
   }
 
   .col-1-2{
@@ -234,6 +229,7 @@
   }
 
   .subsections h2{
+    float:left;
     text-align:right;
     font-size:2.5em;
     font-weight: bold;
@@ -241,13 +237,9 @@
     width:50%;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(144, 144, 144, 0.25);
-    display: inline-block;
-    margin-bottom: 20px;
-    /*padding-left:100px;*/
-   /* position: absolute;
+    position: absolute;
     top:80%;
-    left:25%;*/
-    vertical-align: bottom;
+    left:25%;
   }
 
   .subsections h2:hover{
@@ -256,6 +248,8 @@
 
   .subsection1 .img-background{
     background-image: url("../media/pic14.jpg") ;
+    /*background-color: red;*/
+    background-position: right;
     background-position: -600px 0px;
   }
 
@@ -270,6 +264,8 @@
 
   .subsection2 .img-background{
     background-image: url("../media/pic13.jpg") ;
+    /*background-color: red;*/
+    background-position: left;
     background-position: -100px 0px;
   }
 
@@ -280,6 +276,8 @@
 
   .subsection3 .img-background{
     background-image: url("../media/pic12.jpg") ;
+    /*background-color: red;*/
+    background-position: left;
     background-position: -600px 0px;
   }
 
@@ -294,6 +292,8 @@
 
   .subsection4 .img-background{
     background-image: url("../media/pic14.jpg") ;
+    /*background-color: red;*/
+    background-position: left;
     background-position: -500px 0px;
   }
 
@@ -305,6 +305,8 @@
 
   .subsection5 .img-background{
     background-image: url("../media/pic13.jpg") ;
+    /*background-color: red;*/
+    background-position: left;
     background-position: -100px 0px;
   }
 
@@ -320,6 +322,8 @@
 
   .subsection6 .img-background{
     background-image: url("../media/pic12.jpg") ;
+    /*background-color: red;*/
+    background-position: left;
     background-position: -500px 0px;
   }
 
@@ -341,7 +345,7 @@
   footer li{
     display: inline-block;
     text-align: center;
-    padding:50px 10px;
+        padding:50px 10px;
   }
 
   footer .fab{
@@ -369,20 +373,25 @@
     text-decoration: underline;
   }
 
-  /* Clear fix for the sections*/
 
-  .group:before,
-  .group:after {
-    content: "";
-    display: table;
-  } 
-  .group:after {
-    clear: both;
-  }
-  .group {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-  }
+  /* Smooth scrolling code*/
 
 
+.panel {
+    /*width: 100%;*/
+    /*height: 500px;*/
+    z-index:0; 
+    -webkit-transform: translateZ( 0 );
+    transform: translateZ( 0 );
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-  
+}
+
+
+  a[ id= "section1" ]:target ~ main.panel {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
