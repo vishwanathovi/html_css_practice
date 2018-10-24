@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   */  
+   
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* CF and *Border box */
+
+  *, *:after, *:before{
+    box-sizing: border-box;
+  }
+
+  .cf,.cf:before,.cf:after{
+    content:"";
+    display: table;
+  }
+
+  .cf:after{
+    clear:both;
+  }
+
+  .cf{
+    clear:both;
+    *zoom:1;
+  }
+
+  /* General formatting  */
+
+  html{
+  }
+
+  body {
+    font-size: 16px;
+    color: black;
+    background: #3a4a4f;
+  }
+
+  h1,h2,h3,h4,h5{
+    text-transform: capitalize;
+  }
+
+  h1 {
+    font-size:6em;
+    padding:5px 0;
+  }
+
+  h2{
+    font-size: 4em;
+    padding:10px 0;
+  }
+
+  h3{
+    font-size: 3em;
+    padding:10px 0;
+  }
+
+  h4{
+    font-size:1.6em;
+    padding:5px 0;
+  }
+
+  h5{
+    font-size:1.2em;
+    padding:5px;
+  }
+
+  p {
+    font-size: 1em;
+    /*line-height: 1.5;*/
+    padding:15px 0;
+  }
+
+  /* Main formatting */
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,calc(100vh/12));
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "navigation navigation main main main main main main main main links links"
+    "footer footer footer footer footer footer footer footer footer footer footer footer"
+    ;
+  }
+
+
+/* Defining background color and grid area */
+
+  .header{
+    background-color: #26677b;
+    grid-area: header;
+  }
+
+  .navigation{
+    background-color: #fe9404;
+    grid-area: navigation;
+  }
+
+  .main{
+    background-color: white;
+    grid-area: main;
+  }
+
+  .links{
+    background-color: #b11450;
+    grid-area: links;
+  }
+
+  .footer{
+    background-color: #57a101;
+    grid-area: footer;
+  }
+
+/* All section text formatting */
+
+.container>*{
+  padding:10px;
+}
+
+.header, .footer{
+  color:white;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  align-items:center;
+  justify-items:center;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+
+@media (max-width: 680px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12,calc(100vh/12));
+    grid-template-areas: 
+    "header"
+    "header"
+    "navigation"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "links"
+    "footer"
+    "footer"
+    ;
+  }
+}
+

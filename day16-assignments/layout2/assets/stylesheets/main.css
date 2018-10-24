@@ -1,0 +1,268 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   */ 
+   
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* CF and *Border box */
+
+  *, *:after, *:before{
+    box-sizing: border-box;
+  }
+
+  .cf,.cf:before,.cf:after{
+    content:"";
+    display: table;
+  }
+
+  .cf:after{
+    clear:both;
+  }
+
+  .cf{
+    clear:both;
+    *zoom:1;
+  }
+
+  /* General formatting  */
+
+  html{
+  }
+
+  body {
+    font-size: 10px;
+    color: white;
+  }
+
+  h1,h2,h3,h4,h5{
+    text-transform: capitalize;
+  }
+
+  h1 {
+    font-size:6em;
+    padding:8px 0;
+  }
+
+  h2{
+    font-size: 4em;
+    padding:10px 0;
+  }
+
+  h3{
+    font-size: 3em;
+    padding:10px 0;
+  }
+
+  h4{
+    font-size:1.6em;
+    padding:5px 0;
+  }
+
+  h5{
+    font-size:1.2em;
+    padding:5px;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+    padding:10px 0;
+  }
+
+  .wrapper{
+    max-width: 960px;
+    width:100%;
+    margin:0 auto;
+  }
+
+
+  /* Header formatting */
+  
+  .logo-text{
+    color:green;
+  }
+
+  header{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-gap:20px;
+    /*background-color: blue;*/
+    align-items:center;
+    padding:0 20px ;
+    /*justify-content: center;*/
+  }
+
+  header img{
+    width:30px;
+    height:30px;
+    /*object-fit: cover;*/
+  }
+
+  header .logo{
+    /*transition-duration: 1s;*/
+  }
+
+  header .logo:hover{
+    transform: rotate(360deg);
+    transition-duration: 1s;
+  }
+
+
+
+  /* Hero section formatting */
+
+  .container{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(8,14vw);
+    grid-auto-flow: dense;
+  }
+
+  .img-container{
+    /*display: grid;*/
+   /* grid-template-columns: 1;
+    grid-template-rows: 1;*/
+    /*align-content: center;*/
+  }
+
+  .container img{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    filter: grayscale(100%);
+  }
+
+  .text-section1{
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .img1-container{
+    grid-column:span 3;
+    grid-row: span 2;
+  }
+
+  .img4-container{
+    grid-column:span 1;
+    grid-row:span 2;
+  }
+
+  .img5-container{
+    grid-column:span 1;
+    grid-row:span 2;
+  }
+
+  .img6-container{
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .text-section2{
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .img7-container{
+    grid-row:span 1;
+    grid-column: span 3;
+  }
+
+  .img8-container{
+    grid-row:span 1;
+    grid-column: span 3;
+    /*overflow: hidden;*/
+  }
+
+  /* text-area formatting */
+
+  .text-section{
+    padding:20px;
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color:#444;
+  }
+
+  .text-section a{
+    text-decoration: none;
+    color:yellow;
+  }
+
+
+@media(max-width:640px){
+   .container{
+    grid-template-columns: 1fr;
+    /*grid-template-rows: repeat(10,50vw);*/
+    grid-template-rows: auto;
+  }
+
+  .container>*{
+    grid-column: span 1;
+    grid-row:span 1;
+  }
+
+  .container img{
+    height:auto;
+  }
+
+  /* Text area formatting */
+
+  .text-section{
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+  
+  .text-section h4{
+    font-size:2.4em;
+  }
+
+  .text-section p, .text-section a{
+    font-size:1.4em;
+  }
+
+
+}
+
