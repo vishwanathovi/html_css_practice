@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
-   */  
+   */ 
    
    html, body, div, span, applet, object, iframe,
    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -71,150 +71,123 @@
   /* General formatting  */
 
   html{
-
   }
 
   body {
     font-size: 16px;
     color: black;
-    background: #552713;
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-  }
-
-  h1,h2,h3,h4,h5{
-    text-transform: uppercase;
-    font-weight: 800;
+    background-color: #f5f6e4;
   }
 
   h1 {
-    font-size:6em;
-    padding:10px 0;
+    font-size:2.5em;
+    padding:10px;
   }
 
   h2{
-    font-size: 3em;
-    padding:10px 0;
+    font-size: 2.5em;
+    padding:10px;
   }
 
   h3{
-    font-size: 2.5em;
-    padding:10px 0;
+    font-size: 3em;
+    padding:10px;
   }
 
   h4{
-    font-size:1.5em;
-    padding:10px 0;
+    font-size:1.6em;
+    padding:5px;
   }
 
   h5{
     font-size:1.2em;
-    padding:10px 0;
+    padding:10px;
   }
 
   p {
-    font-size: 1em;
-    padding:5px 0;
-    text-transform: none;
+    font-size: 0.9em;
     line-height: 1.5;
+    /*padding:10px;*/
   }
-
-  img{
-    width:100%;
-  }
-
-  .btn{
-    background-color: #2d160d;
-    border:none;
-    color:white;
-    text-transform: uppercase;
-    padding:15px 30px;
-    display: inline-block;
-  }
-
-  /* Main formatting */
 
   .wrapper{
-    display: block;
-    max-width: 1200px;
+    max-width: 1250px;
     margin:0 auto;
-    text-align: center;
-  }
-
-  .header__section1{
-    padding: 60px 0;
-  }
-
-  .header__main{
-    color:white;
-    font-weight: 800;
-  }
-
-  .header__second{
-    color:#FD5113;
-    font-weight: 300;
-  }
-
-  .header__nav{
-    background-color: #281208;
-  }
-
-  .nav__link{
-    display: inline-block;
-    padding:20px;
-    text-decoration: none;
-    color:#FD5113;
-    font-weight: 300;
-    letter-spacing: 1.3px;
-  }
-
-  .nav__li{
-    display: inline-block;
-  }
-
-  .nav__select{
-    color:white;
-  }
-
-  .nav__link:hover{
-    color:#fff;
   }
 
 
-  /* Hero section formatting */
+  /* Header formatting */
 
-  .hero__container{
-    display: grid;
-    grid-template-rows: 1;
-    grid-template-columns: 1;
+  header{
+    padding:40px 0 ;
+  }
+
+  .header__container{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .header__container h4{
+    flex-basis:90%;
+  }
+
+  .header__container .filter{
+    flex-basis:15%;
+  }
+
+  /* drop down formatting */
+
+  .custom-select {
+    /*display: none; hide original SELECT element:*/
+  }
+
+
+  /* Main section formatting */
+
+  .container{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container .card:nth-child(-n+2){
+    /*background-color: red;*/
+    /*flex-basis:625px;*/
+  }
+
+
+  .card{
     background-color: white;
+    flex-basis: 20%;
+    text-align:center;
+    border:1px solid #f5f6e4;
+    padding:10px;
   }
 
-  .padding{
-    padding:30px;
+  .card img{
+    width:80%;
   }
 
-  .white{
-    background-color: white;
+  .card h5{
+    font-weight: 600;
   }
 
-  /* Main formatting */
-
-  .content{
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-gap:50px;
+  .card p{
+    color:#333;
   }
 
-  .main_section, .sidebar1, .sidebar2{
-    display: grid;
-    justify-items: start;
-    text-align: left;
-  }
 
-  .main_section h5{
-    font-weight: 300;
+  @media(max-width: 800px){
+    .container .card:nth-child(-n+2){
+      flex-basis: 50%;
+    }
+    .container .card:nth-child(n+3){
+      flex-basis: 25%;
+    }
   }
-  
-  
-
